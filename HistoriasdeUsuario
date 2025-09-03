@@ -1,0 +1,77 @@
+#Historias de Usuario – Proyecto Semana 3
+
+este documento recopila historias de usuario hipoteticas
+de la aplicacion Java que permite registrar datos de usuario y vehículo, y calcular el costo de despacho de alimentos.  
+
+---
+
+============ Historia de Usuario 1 – Registro de Usuario
+**Como** usuario del sistema  
+**Quiero** ingresar mi nombre y edad  
+**Para** que el sistema guarde mis datos personales y los muestre en el resumen final.  
+
+### Criterios de aceptación
+- El sistema solicita el nombre como texto libre.  
+- El sistema solicita la edad y valida que esté entre 1 y 99.  
+- Si la edad no es válida, el sistema vuelve a pedir el dato.  
+- Al finalizar, el sistema confirma que los datos han sido guardados.  
+
+
+============Historia de Usuario 2 – Registro de Vehículo
+**Como** usuario del sistema  
+**Quiero** ingresar los datos del vehículo (marca, modelo, cilindrada, combustible, capacidad)  
+**Para** que el sistema los almacene y muestre un resumen de la información.  
+
+### Criterios de aceptación
+- El sistema solicita la marca, modelo y tipo de combustible como texto libre.  
+- El sistema solicita la cilindrada y valida que sea un número positivo.  
+- El sistema solicita la capacidad y valida que sea mayor a 0.  
+- Si algún dato es inválido, el sistema informa el error y vuelve a pedirlo.  
+- El sistema muestra el resumen del vehículo ingresado.  
+
+
+
+============ Historia de Usuario 3 – Ingreso de Datos de Despacho
+**Como** usuario del sistema  
+**Quiero** ingresar el monto de la compra y la distancia del despacho  
+**Para** que el sistema calcule el costo de envío según las reglas definidas.  
+
+### Criterios de aceptación
+- El sistema solicita el monto de la compra y valida que no sea negativo.  
+- El sistema solicita la distancia y valida que sea mayor que 0.  
+- Si los valores no son válidos, el sistema informa y vuelve a solicitar los datos.  
+- El sistema confirma que los valores fueron registrados correctamente.  
+
+---
+
+============ Historia de Usuario 4 – Cálculo del Costo de Despacho
+**Como** usuario del sistema  
+**Quiero** que el sistema calcule el costo del despacho  
+**Para** conocer el total a pagar según el monto de compra y la distancia.  
+
+### Criterios de aceptación
+- Si el monto es **≥ $50.000**, el despacho es gratis.  
+- Si el monto es **entre $25.000 y $49.999**, el costo es $150 por km.  
+- Si el monto es **< $25.000**, el costo es $300 por km.  
+- El sistema guarda el costo de despacho para el resumen final.  
+
+---
+
+============Historia de Usuario 5 – Mostrar Resumen
+**Como** usuario del sistema  
+**Quiero** visualizar en pantalla un resumen completo  
+**Para** confirmar que mis datos personales, los del vehículo y el cálculo de despacho son correctos.  
+
+### Criterios de aceptación
+- El sistema muestra el nombre y la edad del usuario.  
+- El sistema muestra la marca, modelo, cilindrada, combustible y capacidad del vehículo.  
+- El sistema muestra el monto, la distancia y el costo del despacho.  
+- El resumen se presenta en un formato claro y estructurado.  
+
+---
+
+## Notas y Supuestos
+- El sistema funciona como aplicación de consola, sin persistencia de datos.  
+- Los datos ingresados se pierden al finalizar la ejecución.  
+- Se asume que el usuario conoce el uso básico de una terminal para interactuar con el programa.  
+- En futuras versiones se puede extender a interfaz gráfica o almacenamiento en base de datos.  
